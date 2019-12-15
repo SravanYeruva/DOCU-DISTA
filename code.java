@@ -9,11 +9,9 @@ public static void main(String[] args) {
     String firstdocument[] = sc.nextLine().split(" ");
     String seconddocument[] = sc.nextLine().split(" ");
 
-    //create two dictionaries with keys as words and values as count of that word!
     HashMap<String, Integer> firstdictionary = new HashMap<String, Integer>();
     HashMap<String, Integer> seconddictionary = new HashMap<String, Integer>();
 
-    //update counts for firstdocument both dictionaries
     for(int i=0; i<firstdocument.length ;i++) {
         if(!firstdictionary.containsKey(firstdocument[i])) { //word is not in firstdictionary yet
             firstdictionary.put(firstdocument[i], 1);
@@ -29,16 +27,15 @@ public static void main(String[] args) {
 
     }
 
-    //update counts for firstdocument both dictionaries
     for(int i=0; i<seconddocument.length ;i++) {
-        if(!seconddictionary.containsKey(seconddocument[i])) { //word is not in seconddictionary yet
+        if(!seconddictionary.containsKey(seconddocument[i])) { \
             seconddictionary.put(seconddocument[i], 1);
         }
-        else if(seconddictionary.containsKey(seconddocument[i])) { //word is in seconddictionary
+        else if(seconddictionary.containsKey(seconddocument[i])) { 
             seconddictionary.put(seconddocument[i], seconddictionary.get(seconddocument[i]) + 1);
         }
 
-        if(!firstdictionary.containsKey(seconddocument[i])) { //word is not in firstdictionary
+        if(!firstdictionary.containsKey(seconddocument[i])) {
             firstdictionary.put(seconddocument[i], 0);
         }
 
